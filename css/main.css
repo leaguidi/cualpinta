@@ -1,0 +1,137 @@
+*
+{
+	border:0;
+	padding: 0;
+	margin:0;
+	box-sizing:border-box;
+	font-family: 'Gochi Hand', cursive;
+}
+
+body
+{
+	font-size: 1.3em;
+	color:#000;
+	background-color: #fff;
+	font-weight: normal;
+}
+
+section#login
+{
+	width: 300px;
+	margin: 7em auto;
+	background: #69D2E7;
+	border-radius: .5em;
+	padding: .3em;
+	box-shadow: 0em 0em 1em 0em #000;
+
+}
+
+section#login #logo
+{
+	width: 30%;
+	margin: 0 auto;
+	margin-top: -3em;	
+}
+
+form.formbody
+{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+.forgot
+{
+	margin: .3em auto;
+	font-weight: normal;
+}
+
+.inputs
+{
+	margin: .5em auto;
+}
+
+.inputs label
+{
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+.inputs input, label
+{
+	display: block;
+	margin: .2em auto;
+}
+
+.inputs input
+{
+	border: 2px solid black;
+	padding: .6em;
+}
+
+.inputs input:hover
+{
+	box-shadow: 0em 0em 1em 0em rgba(50, 50, 50, 0.75);
+	transition:box-shadow .5s linear;
+}
+
+.inputs input:focus
+{
+	box-shadow: 0em 0em 1em 0em rgba(50, 50, 50, 0.75);
+	transition:box-shadow .5s linear;
+}
+
+.send button#submit
+{
+	padding: .8em;
+	width: 80%;
+	margin:.3em auto;
+	border-radius: .5em;
+	border:2px solid black;
+	background-color: #FA6900;
+	font-size: 1em;
+	box-shadow: inset 0em 0em 1em 0em rgba(50, 50, 50, 0.75);
+}
+
+button.sociallogin
+{
+	display: block;
+	width: 90%;
+	padding: .3em;
+	border-radius: .5em;
+	margin:.5em auto;
+	border: 2px solid black;
+	background-color: #E0E4CC;
+	font-size: 1em;
+	box-shadow: inset 0em 0em 1em 0em rgba(50, 50, 50, 0.75);
+}
+
+button.sociallogin:hover, button#submit:hover
+{
+	box-shadow: none;
+	transition:box-shadow .5s linear;
+}
+
+div.errors, div.error-username, div.error-password
+{
+	display: hidden;
+}
+
+input, button, img, a
+{
+	cursor: pointer;
+}
+
+img
+{
+	width: 100%;
+}
