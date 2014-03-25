@@ -14,7 +14,7 @@
 			<form class="formbody" action="post">
 				<div class="inputs">
 					<label for="username">username:</label>
-					<input type="text" id="username" name="username_str" autocomplete="off" required>
+					<input type="text" id="username" name="username_str" required>
 					<div class="error-username"></div>
 				</div>
 				<div class="inputs">
