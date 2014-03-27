@@ -6,7 +6,7 @@
         const SERVER    = 'localhost';
         const USUARIO   = 'root';
         const CLAVE     = '';
-        const BASE      = 'agencia';
+        const BASE      = 'cualpinta';
         
         //declaramos estática para que se acceda esta propiedad directamente desde el objeto
         static $link;

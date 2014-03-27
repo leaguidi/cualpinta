@@ -1,4 +1,34 @@
 <!doctype html>
+
+<?php 
+	require_once '../config/config.php';
+	
+	if ($_POST['username_str'] != "" and $_POST['password_str'] != "") {
+		$usuario = $_POST['username_str'];
+		$pass = $_POST['password_str'];
+		$empresa = new Empresa();
+		$empresas = $empresa->validarIngreso($usuario, $pass);
+		if (count($empresas) >= 1) {
+			//CREA LA SESSION
+			session_start();
+			$_SESSION["empresaID"] = $empresas["empresaID"];
+			$_SESSION["usuario"] = $usuario;
+			$_SESSION["pass"] = $pass;
+			echo "Me loguee";
+		}
+		else {
+			session_destroy();
+			echo "No encuentra el usuario";
+		}
+	}
+	else {
+		//CHEQUEA LA SESSION EXISTENTE
+		echo "Chequeo si hay una sesion abierta";
+		
+	}
+
+ ?>
+
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -11,10 +41,10 @@
 	<section id="login">
 		<div id="logo"><img src="../imagenes/logo.png" alt=""></div>
 		<div class="loginform">
-			<form class="formbody" action="post">
+			<form class="formbody" method="post">
 				<div class="inputs">
 					<label for="username">username:</label>
-					<input type="text" id="username" name="username_str" autocomplete="off" required>
+					<input type="text" id="username" name="username_str" required>
 					<div class="error-username"></div>
 				</div>
 				<div class="inputs">
