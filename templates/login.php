@@ -12,13 +12,13 @@
 			$empresas = $empresa->validarIngreso($usuario, $pass);
 			if ($empresas->count() >= 1) {
 				//CREA LA SESSION
+				//var_dump($empresas->results());
 				$empresaslistado = $empresas->results();
-				foreach ($empresaslistado as $emp) {
-					var_dump($emp);
-					Session::flash('empresaID', $empresaslistado["empresaID"]);
+				//foreach ($empresaslistado as $emp) {
+					Session::flash('empresaID', $empresaslistado[0]->empresaID);
 					Session::flash('usuario', $usuario);
 					Session::flash('pass', $pass);	
-				}			
+				//}			
 				
 				echo Session::get('empresaID'),Session::get('usuario'),Session::get('pass');
 				//CREO LA COOKIE				

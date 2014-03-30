@@ -141,8 +141,8 @@ class Empresa {
 	
 	public function validarIngreso($usuario, $pass)
 	{
-		$sql = "SELECT empresaID FROM empresas WHERE usuario=?  AND password=? and fchbaja is null";
-		$empresa = $this->conn->query($sql,array(trim($usuario),trim($pass)));
+		$sql = "SELECT empresaID FROM empresas WHERE usuario= ?  AND password= ? and fchbaja is null";
+		$empresa = $this->conn->query($sql, array(trim($usuario),trim($pass)));
 		return $empresa;
 	}
 	
