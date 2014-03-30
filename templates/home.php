@@ -23,13 +23,13 @@
 					<article class="brief">
 						<section>
 							<h5>Evento activo</h5>
-							<p>Fiesta | Lugar | Fecha | Participantes</p>
+							<p>Fiesta Lugar Fecha Costo</p>
 						</section>
 						<section>
 							<h5>Ultimos eventos creados</h5>
-							<p>Fiesta | Lugar | Fecha | Costo</p>
-							<p>Fiesta | Lugar | Fecha | Costo</p>
-							<p>Fiesta | Lugar | Fecha | Costo</p>
+							<p>Fiesta Lugar Fecha Costo</p>
+							<p>Fiesta Lugar Fecha Costo</p>
+							<p>Fiesta Lugar Fecha Costo</p>
 						</section>
 					</article>
 					<button class="button medium">Crear evento</button>
@@ -41,13 +41,13 @@
 					<article class="brief">
 						<section>
 							<h5>Promo activa</h5>
-							<p>Nombre | Evento</p>
+							<p>Nombre Evento Fecha</p>
 						</section>
 						<section>
 							<h5>Promos pasadas</h5>
-							<p>Promo | Evento | Fecha</p>
-							<p>Promo | Evento | Fecha</p>
-							<p>Promo | Evento | Fecha</p>
+							<p>Promo Evento Fecha</p>
+							<p>Promo Evento Fecha</p>
+							<p>Promo Evento Fecha</p>
 						</section>
 					</article>
 					<button class="button medium">Crear promo</button>
@@ -59,13 +59,13 @@
 					<article class="brief">
 						<section>
 							<h5>Eventos mas concurridos</h5>
-							<p>Fiesta | Lugar | Fecha</p>
-							<p>Fiesta | Lugar | Fecha</p>
+							<p>Fiesta Lugar Fecha Participantes</p>
+							<p>Fiesta Lugar Fecha Participantes</p>
 						</section>
 						<section>
 							<h5>Promos mas utilizadas</h5>
-							<p>Fiesta | Lugar | Fecha</p>
-							<p>Fiesta | Lugar | Fecha</p>
+							<p>Fiesta Lugar Fecha Participantes</p>
+							<p>Fiesta Lugar Fecha Participantes</p>
 						</section>
 					</article>
 					<button class="button medium">Ver estadisticas</button>
