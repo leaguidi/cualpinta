@@ -3,30 +3,41 @@
 <?php 
 	require_once '../config/config.php';
 	
-	if ($_POST['username_str'] != "" and $_POST['password_str'] != "") {
-		$usuario = $_POST['username_str'];
-		$pass = $_POST['password_str'];
-		$empresa = new Empresa();
-		$empresas = $empresa->validarIngreso($usuario, $pass);
-		if (count($empresas) >= 1) {
-			//CREA LA SESSION
-			session_start();
-			$_SESSION["empresaID"] = $empresas["empresaID"];
-			$_SESSION["usuario"] = $usuario;
-			$_SESSION["pass"] = $pass;
-			echo "Me loguee";
+	if (isset($_POST['username_str']) and isset($_POST['password_str'])) {
+		
+		if ($_POST['username_str'] != "" and $_POST['password_str'] != "") {
+			$usuario = $_POST['username_str'];
+			$pass = $_POST['password_str'];
+			$empresa = new Empresa();
+			$empresas = $empresa->validarIngreso($usuario, $pass);
+			if ($empresas->count() >= 1) {
+				//CREA LA SESSION
+				$empresaslistado = $empresas->results();
+				foreach ($empresaslistado as $emp) {
+					var_dump($emp);
+					Session::flash('empresaID', $empresaslistado["empresaID"]);
+					Session::flash('usuario', $usuario);
+					Session::flash('pass', $pass);	
+				}			
+				
+				echo Session::get('empresaID'),Session::get('usuario'),Session::get('pass');
+				//CREO LA COOKIE				
+				
+				echo "Me loguee";
+			}
+			else {
+				Session::delete('empresaID');
+				Session::delete('usuario');
+				Session::delete('pass');
+				
+				echo "No encuentra el usuario";
+			}
 		}
 		else {
-			session_destroy();
-			echo "No encuentra el usuario";
+			//CHEQUEA LA SESSION EXISTENTE
+			echo "Chequeo si hay una sesion abierta";	
 		}
 	}
-	else {
-		//CHEQUEA LA SESSION EXISTENTE
-		echo "Chequeo si hay una sesion abierta";
-		
-	}
-
  ?>
 
 <html lang="en">

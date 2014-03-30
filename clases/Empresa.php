@@ -136,16 +136,14 @@ class Empresa {
 	}
 	
 	function __construct() {
-		$conn = DB::getInstance();
+		$this->conn = DB::getInstance();
 	}
 	
 	public function validarIngreso($usuario, $pass)
 	{
 		$sql = "SELECT empresaID FROM empresas WHERE usuario='".trim($usuario).
 				"' AND password='".trim($pass)."' and fchbaja is null";
-		$stmt = $this->conn->prepare($sql);
-		$stmt->execute();
-		$empresa = $stmt->fetchAll();
+		$empresa = $this->conn->query($sql);
 		return $empresa;
 	}
 	

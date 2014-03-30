@@ -24,13 +24,19 @@ class Session
 		return $_SESSION[$name];
 	}
 
-	public static function flash($name, $message = '')
+	/**
+	 * @param string $name 
+	 * @param string $message (valor)
+	 * @return string (vacion)
+	 * Elimina una session si existe y la crea nuevamente
+	 */
+	public static function flash($name, $message)
 	{
 		if(Session::exists($name))
 		{
 			$session = Session::get($name);
 			Session::delete($name);
-			return $session;
+			Session::put($name, $message);
 		}
 		else
 		{
