@@ -25,11 +25,7 @@ function autoCargador($nombreClase)
 	require_once ('../clases/'.$nombreClase.'.php');
 }
 
-function escape($string)
-	{
-		return htmlentities($string, ENT_QUOTES, 'utf-8');
-	}
-require_once('functions/sanitize.php');
+require_once('..functions/sanitize.php');
 
 spl_autoload_register('autoCargador');
  ?>
