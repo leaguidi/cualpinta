@@ -127,29 +127,29 @@ section#content
 .container .title
 {
 	text-align: center;
-	text-shadow:1px 1px 1px #333333;
+	text-shadow:1px 1px 1px #666666;
 	margin-bottom: .5em;
 	text-transform: capitalize;
+	color:#333333;
 }
 
 .container h1.title
 {
 	font-size: 3em;
-	text-shadow:2px 2px 2px #333333;
+	text-shadow:2px 2px 2px #666666;
 
 }
 .container h2.title
 {
 	font-size: 2em;
-	text-shadow:1.5px 1.5px 1.5px #333333;
+	text-shadow:1.5px 1.5px 1.5px #666666;
 }
 
 .container h3.title
 {
 	font-size: 1.5em;
-	text-shadow:1px 1px 1px #333333;
+	text-shadow:1px 1px 1px #666666;
 }
-
 
 
 /*--------------------Footer-----------------------*/
@@ -319,4 +319,28 @@ div.row article.column.twelve{	width: 99.999999996%;}
 .clearfix
 {
 	*zoom:1;
+}
+
+article.brief
+{
+	border-radius: .3em;
+	margin:.5em auto;
+	border:1px solid #F6F6F6;
+	box-shadow: inset 0px 0px 10px 3px #F6F6F6;
+	padding: .5em;
+}
+
+article.brief h5
+{
+	color:#4183c4;
+}
+
+article.brief section p
+{
+	cursor: pointer;
+}
+
+article.brief section p:hover
+{
+	font-weight: bold;
 }

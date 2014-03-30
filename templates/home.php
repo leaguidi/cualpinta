@@ -9,7 +9,7 @@
 <body>
 		<?php include('nav.php'); ?>
 		<section id="content" class="container">
-			<h2 class="title">Home</h2>
+			<h3 class="title">Notificaciones</h3>
 			<div class="row clearfix">
 				<article class="column twelve">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ipsa consequuntur quos sint aperiam nemo! Consequatur, eaque, perspiciatis delectus dicta asperiores corporis quo. Voluptas, modi, iusto, distinctio, aliquid quaerat ipsum minima harum debitis pariatur optio natus asperiores dolore cumque ducimus alias temporibus magnam soluta quod quidem quasi veniam sit expedita! Quae, perferendis, fugit, molestias fuga nostrum distinctio blanditiis temporibus nesciunt accusamus tenetur fugiat necessitatibus quos velit quam ab a ea exercitationem voluptatum voluptates enim at maiores minima optio in dolorum impedit laborum saepe nam quas doloremque! Reiciendis, recusandae, voluptatem, quos obcaecati doloribus at nulla animi expedita maxime assumenda in minima.
@@ -19,17 +19,55 @@
 			<div class="row clearfix">
 				<article class="column four">
 					<h3 class="title">Eventos</h3>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, obcaecati, maiores rerum voluptatibus reprehenderit tempora cumque doloremque iusto repudiandae adipisci. Explicabo, omnis error culpa laudantium tempora nostrum beatae aut porro a id quisquam harum nemo eius ratione suscipit? Placeat voluptatibus beatae ex neque sint animi vero aliquid modi sunt voluptatum.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, libero est alias animi molestiae hic facere assumenda quam eaque quidem deserunt consequuntur. Cumque, commodi quaerat quisquam. Dolore ipsam ab voluptates!
+					<article class="brief">
+						<section>
+							<h5>Evento activo</h5>
+							<p>Fiesta | Lugar | Fecha | Participantes</p>
+						</section>
+						<section>
+							<h5>Ultimos eventos creados</h5>
+							<p>Fiesta | Lugar | Fecha | Costo</p>
+							<p>Fiesta | Lugar | Fecha | Costo</p>
+							<p>Fiesta | Lugar | Fecha | Costo</p>
+						</section>
+					</article>
 					<button class="button medium">Crear evento</button>
 				</article>
+
 				<article class="column four">
 					<h3 class="title">Promos</h3>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis voluptatum laboriosam optio unde autem iste iusto deleniti fugit maiores quis! Ipsam, quo voluptatibus eveniet dolore magni odit voluptatum omnis veritatis quos iure perspiciatis obcaecati atque officia voluptates qui eum optio error accusamus eligendi ea laborum ullam sapiente aliquid reprehenderit rem.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, sint, blanditiis laudantium quam aspernatur sit sed dolor fugiat expedita et ducimus non aut. Sunt tenetur nisi aperiam labore totam alias.
+					<article class="brief">
+						<section>
+							<h5>Promo activa</h5>
+							<p>Nombre | Evento</p>
+						</section>
+						<section>
+							<h5>Promos pasadas</h5>
+							<p>Promo | Evento | Fecha</p>
+							<p>Promo | Evento | Fecha</p>
+							<p>Promo | Evento | Fecha</p>
+						</section>
+					</article>
 					<button class="button medium">Crear promo</button>
 				</article>
+
 				<article class="column four">
 					<h3 class="title">Estadisticas</h3>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, unde, reprehenderit ipsum veritatis a vel vero molestias voluptatibus accusamus molestiae assumenda temporibus dolorum corrupti fugiat odio quaerat numquam odit ullam sit ad nihil deserunt eum! Vel, numquam quod velit earum nobis? Doloremque, id qui numquam assumenda totam esse fuga sapiente.
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, eius, quod, quidem reiciendis impedit a molestias fugiat harum ratione officia temporibus doloribus repudiandae iste dicta laborum repellendus dolorum sint autem.
+					<article class="brief">
+						<section>
+							<h5>Eventos mas concurridos</h5>
+							<p>Fiesta | Lugar | Fecha</p>
+							<p>Fiesta | Lugar | Fecha</p>
+						</section>
+						<section>
+							<h5>Promos mas utilizadas</h5>
+							<p>Fiesta | Lugar | Fecha</p>
+							<p>Fiesta | Lugar | Fecha</p>
+						</section>
+					</article>
 					<button class="button medium">Ver estadisticas</button>
 				</article>
 			</div>
