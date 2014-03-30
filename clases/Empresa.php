@@ -136,7 +136,7 @@ class Empresa {
 	}
 	
 	function __construct() {
-		$conn = Conexion::conectar();
+		$conn = DB::getInstance();
 	}
 	
 	public function validarIngreso($usuario, $pass)
