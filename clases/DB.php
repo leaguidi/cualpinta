@@ -1,13 +1,6 @@
 <?php
 class DB
-{
-	
-	//constantes para la conexion
-    const SERVER    = 'localhost';
-    const USUARIO   = 'root';
-    const CLAVE     = '';
-    const BASE      = 'cualpinta';
-	
+{	
 	private static $_instance = null;
 	private $_pdo,
 			$_query,
@@ -18,7 +11,7 @@ class DB
 	private function __construct()
 	{
 		try {
-			$this->_pdo = new PDO("mysql:host=".self::SERVER.";dbname=".self::BASE.";charset=utf8", self::USUARIO, self::CLAVE);
+			$this->_pdo = new PDO('mysql:host=' . Config::get('mysql/host') . ';dbname=' . Config::get('mysql/db'), Config::get('mysql/username'), Config::get('mysql/password'));
 		} catch(PDOException $e) {
 			die($e->getMessage());
 		}
