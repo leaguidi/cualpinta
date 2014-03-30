@@ -33,65 +33,6 @@
 					<button class="button medium">Ver estadisticas</button>
 				</article>
 			</div>
-
-			<div class="row clearfix">
-				<article class="column twelve">
-				<table class="tab-info">
-					<thead>
-						<tr>
-							<th>Nombre</th>
-							<th>Tipo</th>
-							<th>Fecha</th>
-							<th>Lugar</th>
-							<th>Promocion</th>
-							<th>Seleccion</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>Fiesta</td>
-							<td>Recital</td>
-							<td>15/2/2015</td>
-							<td>Parque Centenario</td>
-							<td>No tiene</td>
-							<td><input type="checkbox"></input></td>
-						</tr>
-						<tr>
-							<td>Fiesta</td>
-							<td>Recital</td>
-							<td>15/2/2015</td>
-							<td>Parque Centenario</td>
-							<td>No tiene</td>
-							<td><input type="checkbox"></input></td>
-						</tr>
-						<tr>
-							<td>Fiesta</td>
-							<td>Recital</td>
-							<td>15/2/2015</td>
-							<td>Parque Centenario</td>
-							<td>No tiene</td>
-							<td><input type="checkbox"></input></td>
-						</tr>
-						<tr>
-							<td>Fiesta</td>
-							<td>Recital</td>
-							<td>15/2/2015</td>
-							<td>Parque Centenario</td>
-							<td>No tiene</td>
-							<td><input type="checkbox"></input></td>
-						</tr>
-						<tr>
-							<td>Fiesta</td>
-							<td>Recital</td>
-							<td>15/2/2015</td>
-							<td>Parque Centenario</td>
-							<td>No tiene</td>
-							<td><input type="checkbox"></input></td>
-						</tr>
-					</tbody>
-				</table>
-			</article>
-			</div>
 		</section>
 
 		<?php include('footer.php'); ?>
