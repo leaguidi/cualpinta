@@ -3,6 +3,10 @@
 <?php 
 	require_once '../config/config.php';
 	
+	$error = '';
+	if (Cookie::exists('empresaID') and Cookie::exists('usuario') and Cookie::exists('pass')) {
+		header('location: home.php');
+	}
 	if (isset($_POST['username_str']) and isset($_POST['password_str'])) {
 		
 		if ($_POST['username_str'] != "" and $_POST['password_str'] != "") {
@@ -12,31 +16,34 @@
 			$empresas = $empresa->validarIngreso($usuario, $pass);
 			if ($empresas->count() >= 1) {
 				//CREA LA SESSION
-				//var_dump($empresas->results());
 				$empresaslistado = $empresas->results();
-				//foreach ($empresaslistado as $emp) {
-					Session::flash('empresaID', $empresaslistado[0]->empresaID);
-					Session::flash('usuario', $usuario);
-					Session::flash('pass', $pass);	
-				//}			
+
+				Session::flash('empresaID', $empresaslistado[0]->empresaID);
+				Session::flash('usuario', $usuario);
+				Session::flash('pass', $pass);	
 				
-				echo Session::get('empresaID'),Session::get('usuario'),Session::get('pass');
+				echo Session::get('empresaID'),' ',Session::get('usuario'),' ',Session::get('pass');
+				
 				//CREO LA COOKIE				
+				if (isset($_POST['rememberme_chk'])  and $_POST['rememberme_chk'] == '1') {
+					Cookie::put('empresaID', $empresaslistado[0]->empresaID, 30);
+					Cookie::put('usuario', $usuario, 30);
+					Cookie::put('pass', $pass, 30);
+				}
 				
-				echo "Me loguee";
+				header('location: home.php');
 			}
 			else {
 				Session::delete('empresaID');
 				Session::delete('usuario');
 				Session::delete('pass');
+				Cookie::delete('empresaID');
+				Cookie::delete('usuario');
+				Cookie::delete('pass');
 				
-				echo "No encuentra el usuario";
+				$error = "<p>el usuario o password son incorrectos</p>";
 			}
-		}
-		else {
-			//CHEQUEA LA SESSION EXISTENTE
-			echo "Chequeo si hay una sesion abierta";	
-		}
+		}		
 	}
  ?>
 
@@ -64,12 +71,12 @@
 					<div class="error-password"></div>
 				</div>
 				<div class="rememberme">
-					<input type="checkbox" id="rememberme" name="rememberme_chk">Remember me! 
+					<input type="checkbox" id="rememberme" name="rememberme_chk" value="1">Remember me! 
 				</div>
 				<div class="send">
 					<button id="submit" type="submit" name="submit_frm">LOGIN</button>	
 				</div>
-				<div class="errors"></div>
+				<div class="errors"><?php echo $error; ?></div>
 				<div class="forgot">
 					<a href="#">Forgot your password?</a>
 				</div>			
