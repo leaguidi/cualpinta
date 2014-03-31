@@ -18,7 +18,7 @@ class Cookie
 
 	public static function put($name, $value, $expiry)
 	{
-		if(setcookie($name, $value, time() + $expiry, '/'))
+		if(setcookie($name, $value, mktime() + $expiry, '/'))
 		{
 			return true;
 		}

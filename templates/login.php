@@ -26,9 +26,9 @@
 				
 				//CREO LA COOKIE				
 				if (isset($_POST['rememberme_chk'])  and $_POST['rememberme_chk'] == '1') {
-					Cookie::put('empresaID', $empresaslistado[0]->empresaID, 30);
-					Cookie::put('usuario', $usuario, 30);
-					Cookie::put('pass', $pass, 30);
+					Cookie::put('empresaID', $empresaslistado[0]->empresaID, 10);
+					Cookie::put('usuario', $usuario, 10);
+					Cookie::put('pass', $pass, 10);
 				}
 				
 				header('location: home.php');
