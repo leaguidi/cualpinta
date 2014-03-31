@@ -359,20 +359,15 @@ form#empresas label
 
 form#empresas input[type=text], input[type=email]
 {
-	border: 1px solid #333;
+	border: 4px solid #DDDDDD;
 	padding: .3em;
 	border-radius: .3em;
+	cursor: pointer;
 }
 
 form#empresas select
 {
 	padding: .3em;
-	border-radius: .3em;
-}
-
-form#empresas input[type=submit]
-{
-	padding: .6em;
 	border-radius: .3em;
 }
 

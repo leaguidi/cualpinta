@@ -76,7 +76,7 @@
 							<input type="text" name="tipo_str" id="tipo">
 						</div>
 
-						<input type="submit" value="Registrarse">
+						<button class="button big" type="submit">Registrar</button>
 
 					</form>
 				</article>
